@@ -1,0 +1,1 @@
+{"statusCode": 200, "headers": {"Content-Type": "application/json"}, "body": "{\"prediction\": 446, \"latency_ms\": 24.409, \"model\": \"MobileNetV2\", \"runtime\": \"ONNX Runtime\"}"}

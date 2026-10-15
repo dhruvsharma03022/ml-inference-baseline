@@ -1,0 +1,11 @@
+FROM python:3.11-slim
+
+WORKDIR /var/task
+
+RUN pip install --no-cache-dir numpy onnxruntime awslambdaric
+
+COPY lambda_app.py /var/task/lambda_app.py
+COPY mobilenetv2-7.onnx /var/task/mobilenetv2-7.onnx
+
+ENTRYPOINT ["python", "-m", "awslambdaric"]
+CMD ["lambda_app.handler"]
